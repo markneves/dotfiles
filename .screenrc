@@ -1,0 +1,11 @@
+defutf8 		on
+term 			xterm
+startup_message 	off
+vbell          	 	on
+defscrollback		4500
+shell			zsh
+nethack			on
+caption			always
+hardstatus alwayslastline "%0=%{kB}| %{kw}%h %{kB}|%=%{kR}Load: %l%100="
+caption string "%{kd}%-w%{r}%n.%t%{-}%+w"
+idle 1800 lockscreen
