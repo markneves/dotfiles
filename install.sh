@@ -1,5 +1,5 @@
 #!/bin/sh
-files=(".zshrc" ".screenrc" ".vimrc" ".Xdefaults" ".xprofile")
+files=(".zshrc" ".screenrc" ".vimrc" ".gitconfig" ".Xdefaults" ".xprofile")
 for i in "${files[@]}"
 do
 	cp -v $i ~/

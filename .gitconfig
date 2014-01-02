@@ -1,0 +1,32 @@
+[user]
+    name = Mark Neves
+    email = mneves@gmail.com
+
+[core]
+    excludesfile = ~/.gitignore
+    editor = vim
+
+[diff]
+    tool = vimdiff
+
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = auto
+    ui = auto
+
+[push]
+    default = simple
+
+[alias]
+    st = status
+    ci = commit
+    cm = commit -m
+    ca = commit -amend
+    br = branch
+    co = checkout
+    df = diff
+    dc = diff --cached
+    lg = log -p
+    ls = ls-files
