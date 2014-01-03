@@ -28,5 +28,5 @@
     co = checkout
     df = diff
     dc = diff --cached
-    lg = log -p
     ls = ls-files
+    lg = log --graph --pretty=format:'%Cred%h%Creset %Cgreen(%cr)%Creset%x09%C(yellow)%d%Creset %s' --abbrev-commit --date=relative
