@@ -4,10 +4,14 @@ set autoread
 set wildignore=*.o,*~,*.pyc
 set ruler
 set cmdheight=2
-set ignorecase
-set smartcase
-set hlsearch
-set incsearch
+set ignorecase smartcase
+set smarttab
+set smartindent autoindent
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+set textwidth=80
+set incsearch hlsearch wrapscan
 set magic
 set showmatch
 set mat=2
@@ -16,6 +20,8 @@ set nobackup
 set nowb
 set noswapfile
 set number
+set ttyfast
+
 map 0 ^
 nmap <M-j> mz:m+<cr>`z
 nmap <M-k> mz:m-2<cr>`z
