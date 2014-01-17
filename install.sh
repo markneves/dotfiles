@@ -1,10 +1,4 @@
 #!/bin/sh
-files=(".zshrc" ".screenrc" ".vimrc" ".gitconfig" ".Xdefaults" ".xprofile")
-for i in "${files[@]}"
-do
-	cp -v $i ~/
-done
-
 while true; do
     read -p "Install oh-my-zsh and plugins? [y/N] " yn
     case $yn in
@@ -14,11 +8,16 @@ while true; do
             git clone git://github.com/tarruda/zsh-autosuggestions ~/.oh-my-zsh/custom/zsh-autosuggestions;
             curl https://raw.github.com/zsh-users/zsh-history-substring-search/master/zsh-history-substring-search.zsh > ~/.oh-my-zsh/custom/zsh-history-substring-search.zsh
             break;;
-        [Nn]* ) exit;;
-        * ) exit;;
+        [Nn]* ) break;;
+        * ) break;;
     esac
 done
 cp -v themes/mark2.zsh-theme ~/.oh-my-zsh/themes/
 
+files=(".zshrc" ".screenrc" ".vimrc" ".gitconfig" ".Xdefaults")
+for i in "${files[@]}"
+do
+    cp -v $i ~/
+done
 echo
 echo "[*] Complete"
