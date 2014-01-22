@@ -3,7 +3,7 @@
     email = mneves@gmail.com
     
 [github]
-    user = MarkNeves
+    user = markneves
 
 [core]
     excludesfile = ~/.gitignore
