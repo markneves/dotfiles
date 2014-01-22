@@ -21,5 +21,5 @@ bindkey '^T' autosuggest-toggle
 
 # User configuration
 
-export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/local/bin"
+export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/local/bin:/opt/local/sbin"
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
