@@ -9,7 +9,7 @@ source ~/.oh-my-zsh/custom/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.oh-my-zsh/custom/zsh-history-substring-search.zsh
 source ~/.oh-my-zsh/custom/zsh-autosuggestions/autosuggestions.zsh
 
-#start autocomplete
+# start autocomplete
 zle-line-init() {
     zle autosuggest-start
 }
@@ -20,6 +20,13 @@ zle -N zle-line-init
 bindkey '^T' autosuggest-toggle
 
 # User configuration
-
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/local/bin:/opt/local/sbin"
+
+# Aliases
+alias ls='ls -F -G'
+alias la='ls -F -A -G'
+alias lg='ls -F -g -G'
+alias nano='nano -w'
+#eval `dircolors -b /etc/DIR_COLORS`
+
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
