@@ -12,9 +12,11 @@ while true; do
         * ) break;;
     esac
 done
+echo
+echo "Copying config files to homedir:"
 cp -v themes/mark2.zsh-theme ~/.oh-my-zsh/themes/
 
-files=(".zshrc" ".screenrc" ".vimrc" ".gitconfig" ".Xdefaults")
+files=(".zshrc" ".screenrc" ".tmux.conf" ".vimrc" ".gitconfig" ".Xdefaults")
 for i in "${files[@]}"
 do
     cp -v $i ~/
