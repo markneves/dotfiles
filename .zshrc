@@ -27,7 +27,12 @@ export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/local/bin:/opt/lo
 alias ls='ls -F -G'
 alias la='ls -F -A -G'
 alias lg='ls -F -g -G'
+alias lh='ls -lh -G'
 alias nano='nano -w'
+alias s=screen
+alias sr='screen -r'
+alias sls='screen -ls'
+alias mv='mv -v'
 alias taskio='ssh -i  "$CERTS/taskio-dev.pem" ubuntu@54.225.159.3'
 #eval `dircolors -b /etc/DIR_COLORS`
 
