@@ -7,8 +7,10 @@ set cmdheight=2
 set ignorecase smartcase
 set smarttab
 set smartindent autoindent
+set copyindent
 set expandtab
 set shiftwidth=4
+set shiftround
 set softtabstop=4
 set textwidth=80
 set incsearch hlsearch wrapscan
