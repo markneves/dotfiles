@@ -3,7 +3,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="mark2" 
 CERTS="/Volumes/Boxcryptor Classic/certs"
 
-plugins=(git git-extras github node npm osx pip pyenv pylint python screen sublime vi-mode autopep8 bower macports compleat)
+plugins=(brew git git-extras github node npm osx pip pyenv pylint python screen sublime vi-mode autopep8 bower compleat)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.oh-my-zsh/custom/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -21,12 +21,12 @@ zle -N zle-line-init
 bindkey '^T' autosuggest-toggle
 
 # User configuration
-export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/local/bin:/opt/local/sbin"
+export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin"
 
 # Aliases
 alias ls='ls -F -G'
-alias la='ls -F -A -G'
 alias lg='ls -F -g -G'
+alias la='ls -F -G -A'
 alias lh='ls -lh -G'
 alias nano='nano -w'
 alias s=screen
