@@ -2,6 +2,7 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="mark2" 
 CERTS="/Volumes/Boxcryptor Classic/certs"
+m="$USER@54.85.249.16" #lower-case for shell convenience
 
 plugins=(brew git git-extras github node npm osx pip pyenv pylint python screen sublime vi-mode autopep8 bower compleat)
 
@@ -33,7 +34,8 @@ alias s=screen
 alias sr='screen -r'
 alias sls='screen -ls'
 alias mv='mv -v'
-alias taskio='ssh -i  "$CERTS/taskio-dev.pem" ubuntu@54.225.159.3'
-#eval `dircolors -b /etc/DIR_COLORS`
+alias m='ssh -i "$CERTS/mKey.pem" $m'
+alias mscp='scp -i "$CERTS/mKey.pem"'
 
+#eval `dircolors -b /etc/DIR_COLORS`
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
