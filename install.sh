@@ -14,12 +14,20 @@ while true; do
 done
 echo
 echo "Copying config files to homedir:"
-cp -v themes/mark2.zsh-theme ~/.oh-my-zsh/themes/
 
-files=(".zshrc" ".screenrc" ".tmux.conf" ".vimrc" ".gitconfig" ".Xdefaults")
+files=(".zshrc" ".screenrc" ".tmux.conf" ".vimrc" ".gitconfig")
+
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+    files=("${files[@]}" ".Xdefaults")
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    :   #osx-specific config includes
+fi
+
 for i in "${files[@]}"
 do
     cp -v $i ~/
 done
+cp -v themes/mark2.zsh-theme ~/.oh-my-zsh/themes/
+
 echo
 echo "[*] Complete"

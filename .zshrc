@@ -23,10 +23,11 @@ bindkey '^T' autosuggest-toggle
 
 # User configuration
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin"
+export ANDROID_HOME="/usr/local/opt/android-sdk"
 
 # Aliases
 alias ls='ls -F -G'
-alias lg='ls -F -g -G'
+alias lg='ls -F -G -g'
 alias la='ls -F -G -A'
 alias lh='ls -lh -G'
 alias nano='nano -w'
@@ -37,10 +38,5 @@ alias mv='mv -v'
 alias m='ssh -i "$CERTS/mKey.pem" $m'
 alias mscp='scp -i "$CERTS/mKey.pem"'
 
-# Non-standard pkg aliases
-alias vi='vim'
-alias top='htop'
-alias i='sudo iftop'
-
 #eval `dircolors -b /etc/DIR_COLORS`
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+#export SSH_KEY_PATH="~/.ssh/dsa_id"
