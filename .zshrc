@@ -37,6 +37,9 @@ alias sls='screen -ls'
 alias mv='mv -v'
 alias m='ssh -i "$CERTS/mKey.pem" $m'
 alias mscp='scp -i "$CERTS/mKey.pem"'
+alias vi='vim'
+alias top='htop'
+alias i='sudo iftop'
 
 #eval `dircolors -b /etc/DIR_COLORS`
 #export SSH_KEY_PATH="~/.ssh/dsa_id"
