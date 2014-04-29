@@ -27,7 +27,7 @@ for i in "${files[@]}"
 do
     cp -v $i ~/
 done
-cp -v themes/mark2.zsh-theme ~/.oh-my-zsh/themes/
+cp -v themes/*.zsh-theme ~/.oh-my-zsh/themes/
 
 echo
 echo "[*] Complete"
