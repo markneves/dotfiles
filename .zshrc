@@ -1,6 +1,6 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="mark2" 
+ZSH_THEME="mark3" 
 CERTS="/Volumes/Boxcryptor Classic/certs"
 m="$USER@54.85.249.16" #lower-case for shell convenience
 
