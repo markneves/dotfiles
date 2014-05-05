@@ -19,17 +19,16 @@ files=(".zshrc" ".screenrc" ".tmux.conf" ".vimrc" ".gitconfig")
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     files=("${files[@]}" ".Xdefaults")
-    COLOR_MOD="--color"
+    echo -e "COLOR_MOD=\"--color\"\n$(cat .zshrc)" > .zshrc
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-    COLOR_MOD="-G"
+    echo "COLOR_MOD=\"-G\"\n$(cat .zshrc)" > .zshrc
 fi
-
-echo "COLOR_MOD=\"$COLOR_MOD\"\n$(cat .zshrc)" > .zshrc
 
 for i in "${files[@]}"
 do
     cp -v $i ~/
 done
+
 cp -v themes/*.zsh-theme ~/.oh-my-zsh/themes/
 
 echo
