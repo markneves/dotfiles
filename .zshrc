@@ -1,4 +1,3 @@
-# Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="mark3" 
 CERTS="/Volumes/Boxcryptor Classic/certs"
@@ -26,10 +25,10 @@ export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin"
 export ANDROID_HOME="/usr/local/opt/android-sdk"
 
 # Aliases
-alias ls='ls -F -G'
-alias lg='ls -F -G -g'
-alias la='ls -F -G -A'
-alias lh='ls -lh -G'
+alias ls='ls -F $COLOR_MOD'
+alias lg='ls -F -g $COLOR_MOD'
+alias la='ls -F -A $COLOR_MOD'
+alias lh='ls -lh $COLOR_MOD'
 alias nano='nano -w'
 alias s=screen
 alias sr='screen -r'

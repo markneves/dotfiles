@@ -19,9 +19,12 @@ files=(".zshrc" ".screenrc" ".tmux.conf" ".vimrc" ".gitconfig")
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     files=("${files[@]}" ".Xdefaults")
+    COLOR_MOD="--color"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-    :   #osx-specific config includes
+    COLOR_MOD="-G"
 fi
+
+echo "COLOR_MOD=\"$COLOR_MOD\"\n$(cat .zshrc)" > .zshrc
 
 for i in "${files[@]}"
 do
