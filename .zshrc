@@ -28,7 +28,7 @@ alias top='htop'
 alias i='sudo iftop'
 
 # Other plugins
-source ~/.oh-my-zsh/custom/autosuggestions.zsh
+source ~/.oh-my-zsh/custom/zsh-autosuggestions/autosuggestions.zsh
 zle-line-init() {
     zle autosuggest-start
 }
