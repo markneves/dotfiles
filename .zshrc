@@ -10,6 +10,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin"
 export ANDROID_HOME="/usr/local/opt/android-sdk"
+export EDITOR="vim"
 
 # Aliases
 alias ls='ls -F $COLOR_MOD'
@@ -26,15 +27,11 @@ alias mscp='scp -i "$CERTS/mKey.pem"'
 alias vi='vim'
 alias top='htop'
 alias i='sudo iftop'
+alias df='df -h'
+alias du='du -h'
+alias h='history | tail -25'
 
 # Other plugins
-source ~/.oh-my-zsh/custom/zsh-autosuggestions/autosuggestions.zsh
-zle-line-init() {
-    zle autosuggest-start
-}
-zle -N zle-line-init
-bindkey '^T' autosuggest-toggle
-
 zmodload zsh/terminfo
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
@@ -42,6 +39,12 @@ bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 
 source ~/.oh-my-zsh/custom/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.oh-my-zsh/custom/zsh-autosuggestions/autosuggestions.zsh
+zle-line-init() {
+    zle autosuggest-start
+}
+zle -N zle-line-init
+bindkey '^T' autosuggest-toggle
 
 #eval `dircolors -b /etc/DIR_COLORS`
 #export SSH_KEY_PATH="~/.ssh/dsa_id"
