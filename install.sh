@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 while true; do
     read -p "Install oh-my-zsh and plugins? [y/N] " yn
     case $yn in
