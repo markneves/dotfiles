@@ -26,7 +26,7 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
     files=("${files[@]}" ".Xdefaults")
     echo -e "COLOR_MOD=\"--color\"\n$(cat ~/.zshrc)" > ~/.zshrc
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-    echo "COLOR_MOD=\"-G\"\n$(cat ~/.zshrc)" > ~/.zshrc
+    printf "COLOR_MOD=\"-G\"\n$(cat ~/.zshrc)" > ~/.zshrc
 fi
 
 if [[ "$HOSTNAME" == "workbox" ]]; then
