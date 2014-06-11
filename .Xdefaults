@@ -26,18 +26,18 @@ Urxvt.secondaryScroll:	true
 *color0:       #000000
 *color1:       #912226
 *color2:       #00f72c
-*color3:       #ae7b00
+*color3:       #e9b84a
 *color4:       #1d2594
-*color5:       #682a9b
-*color6:       #2b6651
-*color7:       #929593
-*color8:       #666666
+*color5:       #d41e6d
+*color6:       #8bb7e0
+*color7:       #ffffff
+*color8:       #777777
 *color9:       #cc6666
-*color10:      #b5bd68
-*color11:      #f0c674
+*color10:      #00f72c
+*color11:      #fdbf39
 *color12:      #81a2be
-*color13:      #b294bb
-*color14:      #8abeb7
-*color15:      #ecebec
+*color13:      #fb4668
+*color14:      #4ca6fc
+*color15:      #dddddd
 
 
