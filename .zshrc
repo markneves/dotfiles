@@ -2,8 +2,9 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="mark3"
 CERTS="/Volumes/Boxcryptor Classic/certs"
 m="$USER@54.85.249.16" #lower-case for shell convenience
+t="$USER@107.182.132.54"
 
-plugins=(bower brew compleat docker git-extras history-substring-search last-working-dir npm python redis-cli screen sublime tmux)
+plugins=(bower brew compleat docker git-extras history-substring-search npm python redis-cli screen sublime tmux)
 
 source $ZSH/oh-my-zsh.sh
 
