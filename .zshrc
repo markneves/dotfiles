@@ -12,6 +12,13 @@ source $ZSH/oh-my-zsh.sh
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin"
 export ANDROID_HOME="/usr/local/opt/android-sdk"
 export EDITOR="vim"
+export TERM='xterm-256color'
+
+# Options
+setopt  append_history
+setopt  hist_no_store
+setopt  multios
+setopt  clobber
 
 # Aliases
 alias ls='ls -F $COLOR_MOD'
