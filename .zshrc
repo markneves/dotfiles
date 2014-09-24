@@ -1,15 +1,14 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="mark3"
-CERTS="/Volumes/Boxcryptor Classic/certs"
+CERTS="/Volumes/cloud/Certs"
 m="$USER@54.85.249.16" #lower-case for shell convenience
-t="$USER@107.182.132.54"
 
-plugins=(bower brew compleat docker git-extras history-substring-search npm python redis-cli screen sublime tmux)
+plugins=(bower brew brew-cask compleat docker git-extras history-substring-search npm python redis-cli screen sublime tmux)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin"
+export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:$HOME/bin"
 export ANDROID_HOME="/usr/local/opt/android-sdk"
 export EDITOR="vim"
 export TERM='xterm-256color'
