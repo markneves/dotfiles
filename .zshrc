@@ -1,7 +1,7 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="mark3"
 CERTS="/Volumes/cloud/Certs"
-m="$USER@54.85.249.16" #lower-case for shell convenience
+m="core@107.170.225.210" #lower-case for shell convenience
 
 plugins=(bower brew brew-cask compleat docker git-extras history-substring-search npm python redis-cli screen sublime tmux)
 
@@ -29,14 +29,19 @@ alias s=screen
 alias sr='screen -r'
 alias sls='screen -ls'
 alias mv='mv -v'
-alias m='ssh -i "$CERTS/mKey.pem" $m'
-alias mscp='scp -i "$CERTS/mKey.pem"'
+alias m='ssh -A $m'
 alias vi='vim'
 alias top='htop'
 alias i='sudo iftop'
 alias df='df -h'
 alias du='du -h'
 alias h='history | tail -25'
+alias dps='docker ps'
+alias di='docker images'
+alias dstop='docker stop $(docker ps -a -q)' #stop all
+alias drm='docker rm $(docker ps -a -q)' #rm all containers
+alias dri='docker rmi $(docker images -q)' #rm all images
+dbuild() { docker build -t=$1 .; }
 
 # Other plugins
 zmodload zsh/terminfo
