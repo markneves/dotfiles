@@ -1,12 +1,10 @@
 #!/bin/bash
 while true; do
-    read -p "Install oh-my-zsh and plugins? [y/N] " yn
+    read -p "Install Antigen? [y/N] " yn
     case $yn in
         [Yy]* )
-            curl -L http://install.ohmyz.sh | sh
-            git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/zsh-syntax-highlighting;
-            git clone git://github.com/tarruda/zsh-autosuggestions ~/.oh-my-zsh/custom/zsh-autosuggestions;
-            curl https://raw.github.com/zsh-users/zsh-history-substring-search/master/zsh-history-substring-search.zsh > ~/.oh-my-zsh/custom/zsh-history-substring-search.zsh
+          mkdir $HOME/.antigen
+          curl -L https://raw.githubusercontent.com/zsh-users/antigen/master/antigen.zsh > $HOME/.antigen/antigen.zsh
             break;;
         [Nn]* ) break;;
         * ) break;;
@@ -15,7 +13,7 @@ done
 echo
 echo "Copying config files to homedir:"
 
-files=(".zshrc" ".screenrc" ".tmux.conf" ".vimrc" ".gitconfig")
+files=(".zshrc" ".zsh_alias" ".screenrc" ".tmux.conf" ".vimrc" ".gitconfig")
 
 for i in "${files[@]}"
 do
@@ -32,8 +30,6 @@ fi
 if [[ "$HOSTNAME" == "workbox" ]]; then
     echo "source ~/.zsh-work" >> ~/.zshrc
 fi
-
-cp -v themes/*.zsh-theme ~/.oh-my-zsh/themes/
 
 echo
 echo "[*] Complete"
