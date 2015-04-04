@@ -41,7 +41,10 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 # zle -N zle-line-init
 
 # Theme
-antigen theme markneves/dotfiles themes/mark3
+antigen theme markneves/dotfiles themes/mark4
 
 antigen apply
+if [[ -a "$HOME/.zsh_hosts" ]]; then
+    source "$HOME/.zsh_hosts"
+fi
 source "$HOME/.zsh_alias"
