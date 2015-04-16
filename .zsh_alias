@@ -14,9 +14,12 @@ alias i='sudo iftop'
 alias df='df -h'
 alias du='du -h'
 alias h='history | tail -25'
+alias 'ps?'='ps aux | grep '
 alias dps='docker ps'
 alias di='docker images'
 alias dstop='docker stop $(docker ps -a -q)' #stop all
 alias drm='docker rm $(docker ps -a -q)' #rm all containers
 alias dri='docker rmi $(docker images -q)' #rm all images
 dbuild() { docker build -t=$1 .; }
+dsh() { docker exec -it $1 bash; }
+pave() { cat ~/.ssh/id_rsa.pub | ssh $1 'cat >> .ssh/authorized_keys'; }
