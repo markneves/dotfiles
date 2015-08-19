@@ -13,7 +13,7 @@ done
 echo
 echo "Copying config files to homedir:"
 
-files=(".zshrc" ".zsh_alias" ".screenrc" ".tmux.conf" ".vimrc" ".gitconfig")
+files=(".zshrc" ".zsh_alias" ".screenrc" ".tmux.conf" ".vimrc")
 
 for i in "${files[@]}"
 do

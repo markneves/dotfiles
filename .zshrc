@@ -28,7 +28,6 @@ antigen bundle npm
 antigen bundle python
 antigen bundle redis-cli
 antigen bundle screen
-antigen bundle sublime
 antigen bundle tmux
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-syntax-highlighting

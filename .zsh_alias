@@ -1,3 +1,9 @@
+alias cpv="rsync -poghb --backup-dir=/tmp/rsync -e /dev/null --progress --"
+alias usenode='brew unlink iojs && brew link node && echo Updating NPM && npm install -g npm@latest && echo Using Node.js'
+alias useio='brew unlink node && brew link --force iojs && echo Updating NPM && npm install -g npm@latest && echo Using io.js'
+alias pipup='sudo -H pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 sudo -H pip install -U'
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
 alias ls='ls -F $COLOR_MOD'
 alias lg='ls -F -g $COLOR_MOD'
 alias la='ls -F -A $COLOR_MOD'
@@ -7,7 +13,6 @@ alias s=screen
 alias sr='screen -r'
 alias sls='screen -ls'
 alias mv='mv -v'
-alias m='ssh -i $owsla -A $m'
 alias vi='vim'
 alias top='htop'
 alias i='sudo iftop'
