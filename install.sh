@@ -1,7 +1,11 @@
 #!/bin/bash
 while true; do
-    read -p "Install Antigen? [y/N] " yn
-    case $yn in
+  if [ "$1" == "--auto" ]; then
+    install='Y'
+  else
+    read -p "Install Antigen? [y/N] " install
+  fi
+    case $install in
         [Yy]* )
           mkdir $HOME/.antigen
           curl -L https://raw.githubusercontent.com/zsh-users/antigen/master/antigen.zsh > $HOME/.antigen/antigen.zsh
