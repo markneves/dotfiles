@@ -1,11 +1,11 @@
-source '$HOME/.antigen/antigen.zsh'
+source "$HOME/.antigen/antigen.zsh"
 
 # User configuration
-export PATH='/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:$HOME/bin'
-export ANDROID_HOME='/usr/local/opt/android-sdk'
-export EDITOR='vim'
-export TERM='xterm-256color'
-export NODE_ENV='development'
+export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:$HOME/bin"
+export ANDROID_HOME="/usr/local/opt/android-sdk"
+export EDITOR="vim"
+export TERM="xterm-256color"
+export NODE_ENV="development"
 
 # Options
 setopt append_history
