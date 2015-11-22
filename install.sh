@@ -3,12 +3,11 @@ while true; do
   if [ "$1" == "--auto" ]; then
     install='Y'
   else
-    read -p "Install Antigen? [y/N] " install
+    read -p "Install ZGen? [y/N] " install
   fi
     case $install in
         [Yy]* )
-          mkdir $HOME/.antigen
-          curl -L https://raw.githubusercontent.com/zsh-users/antigen/master/antigen.zsh > $HOME/.antigen/antigen.zsh
+          curl -L https://raw.githubusercontent.com/tarjoilija/zgen/master/zgen.zsh > $HOME/.zgen.zsh
             break;;
         [Nn]* ) break;;
         * ) break;;
@@ -29,10 +28,6 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
     echo -e "COLOR_MOD=\"--color\"\n$(cat ~/.zshrc)" > ~/.zshrc
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     printf "COLOR_MOD=\"-G\"\n$(cat ~/.zshrc)" > ~/.zshrc
-fi
-
-if [[ "$HOSTNAME" == "workbox" ]]; then
-    echo "source ~/.zsh-work" >> ~/.zshrc
 fi
 
 echo

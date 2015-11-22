@@ -1,50 +1,49 @@
-source "$HOME/.antigen/antigen.zsh"
+source "${HOME}/.zgen.zsh"
 
 # User configuration
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:$HOME/bin"
 export ANDROID_HOME="/usr/local/opt/android-sdk"
 export EDITOR="vim"
-export TERM="xterm-256color"
-export NODE_ENV="development"
+export TERM='xterm-256color'
+export COMPLETION_WAITING_DOTS="true"
+export DISABLE_AUTO_TITLE="false"
 
 # Options
 setopt append_history
+setopt extended_history
+setopt hist_expire_dups_first
 setopt hist_no_store
+setopt share_history
 setopt multios
 setopt clobber
-antigen use oh-my-zsh
-# zmodload zsh/terminfo
+setopt correct
 
-# Bundles
-antigen bundle atom
-antigen bundle aws
-#antigen bundle bower
-antigen bundle brew
-antigen bundle brew-cask
-antigen bundle compleat
-antigen bundle docker
-antigen bundle git
-antigen bundle git-extras
-antigen bundle npm
-antigen bundle python
-antigen bundle redis-cli
-antigen bundle screen
-antigen bundle tmux
-antigen bundle zsh-users/zsh-completions
-antigen bundle zsh-users/zsh-syntax-highlighting
+zstyle ':completion:*' accept-exact '*(N)'
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path ~/.zsh/cache
+zstyle -e ':completion:*:default' list-colors 'reply=("${PREFIX:+=(#bi)($PREFIX:t)*==34=34}:${(s.:.)LS_COLORS}")';
 
-# antigen bundle tarruda/zsh-autosuggestions  # buggy atm
-#
-# zle-line-init() {
-#   zle autosuggest-start
-# }
-# zle -N zle-line-init
-
-# Theme
-antigen theme markneves/dotfiles themes/mark4
-
-antigen apply
 if [[ -a "$HOME/.zsh_hosts" ]]; then
     source "$HOME/.zsh_hosts"
 fi
-source "$HOME/.zsh_alias"
+
+if [[ -a "$HOME/.zsh_alias" ]]; then
+    source "$HOME/.zsh_alias"
+fi
+
+# Plugins
+# zgen oh-my-zsh plugins/aws
+zgen oh-my-zsh plugins/brew
+zgen oh-my-zsh plugins/brew-cask
+zgen oh-my-zsh plugins/compleat
+zgen oh-my-zsh plugins/docker
+zgen oh-my-zsh plugins/git
+zgen oh-my-zsh plugins/git-extras
+# zgen oh-my-zsh plugins/npm  #laggy
+zgen oh-my-zsh plugins/python
+# zgen oh-my-zsh plugins/redis-cli
+zgen oh-my-zsh plugins/screen
+zgen oh-my-zsh plugins/tmux
+zgen load zsh-users/zsh-completions
+zgen load zsh-users/zsh-syntax-highlighting
+zgen load markneves/dotfiles themes/mark5
