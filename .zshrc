@@ -1,7 +1,8 @@
 source "${HOME}/.zgen.zsh"
 
 # User configuration
-export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:$HOME/bin"
+export GOPATH="$HOME/env/go"
+export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:$HOME/bin:$GOPATH/bin"
 export ANDROID_HOME="/usr/local/opt/android-sdk"
 export EDITOR="vim"
 export TERM='xterm-256color'
