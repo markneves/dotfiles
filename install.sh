@@ -7,7 +7,7 @@ while true; do
   fi
     case $install in
         [Yy]* )
-          curl -L https://raw.githubusercontent.com/tarjoilija/zgen/master/zgen.zsh > $HOME/.zgen.zsh
+          curl -L https://raw.githubusercontent.com/tarjoilija/zgen/zgen.zsh > $HOME/.zgen.zsh
             break;;
         [Nn]* ) break;;
         * ) break;;
