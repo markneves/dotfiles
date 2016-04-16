@@ -1,4 +1,4 @@
-source "${HOME}/.zgen.zsh"
+source "${HOME}/.zgen/zgen.zsh"
 
 # User configuration
 export GOPATH="$HOME/env/go"
