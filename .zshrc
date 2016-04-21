@@ -1,4 +1,7 @@
 source "${HOME}/.zgen/zgen.zsh"
+unalias run-help
+autoload run-help
+HELPDIR=/usr/local/share/zsh/help
 
 # User configuration
 export GOPATH="$HOME/env/go"
@@ -13,12 +16,12 @@ export DISABLE_AUTO_TITLE="false"
 setopt append_history
 setopt extended_history
 setopt hist_expire_dups_first
-setopt hist_no_store
-setopt share_history
 setopt multios
 setopt clobber
-setopt correct
 
+SAVEHIST=100
+HISTFILE=~/.zsh_history
+ 
 zstyle ':completion:*' accept-exact '*(N)'
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
