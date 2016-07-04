@@ -4,4 +4,4 @@ function print_date() {
 
 # credit to omz/clean
 PROMPT='%{$fg[$NCOLOR]%}%B%m%b%{$reset_color%}:%{$fg[blue]%}%B%c/%b%{$reset_color%} %(!.#.$) '
-RPROMPT='${RESET}${WHITE}$(print_date)${RESET}'
+RPROMPT='${RESET}%F{8}$(print_date)${RESET}'
